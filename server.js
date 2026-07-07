@@ -375,8 +375,17 @@ app.get("/", (req, res) => {
       await loadLogs();
     }
 
-    loadLogs();
-  </script>
+loadLogs();
+
+setInterval(() => {
+  const hasOpenDetails = document.querySelector("details[open]");
+
+  if (hasOpenDetails) {
+    return;
+  }
+
+  loadLogs();
+}, 3000);  </script>
 </body>
 </html>
   `);
