@@ -376,7 +376,6 @@ app.get("/", (req, res) => {
     }
 
     loadLogs();
-    setInterval(loadLogs, 3000);
   </script>
 </body>
 </html>
